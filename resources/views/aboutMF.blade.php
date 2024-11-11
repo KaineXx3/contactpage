@@ -145,7 +145,7 @@
 
     .table th, .table td {
         padding: 15px;
-        text-align: left;
+        text-align: center;
         border-bottom: 1px solid #ddd;
         font-size: 16px;
     }
@@ -184,6 +184,36 @@
         .table {
             font-size: 14px;
         }
+    }
+    /* Contact Section */
+    .contact-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .contact-section h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #155437;
+        margin-bottom: 30px;
+    }
+
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .contact-icons a {
+        text-decoration:none;
+        color: #554940;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+        color: #ab47bc;
     }
 </style>
 
@@ -271,6 +301,15 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="contact-section">
+        <h3>Contact Information</h3>
+        <div class="contact-icons">
+            <a href="mailto:fang4245@gmail.com" title="Email">Email<i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/ooi-ming-fang-b0aba1299/" target="_blank" title="LinkedIn">LinkedIn<i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/OoiMFang" target="_blank" title="GitHub">GitHub<i class="fab fa-github"></i></a>
+        </div>
     </div>
 </div>
 
