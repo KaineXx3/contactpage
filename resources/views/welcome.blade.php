@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<h2 class="text-center my-3">Group Members</h2>
+<h2 class="text-center my-3">做错，paiseh(自己删下，在welcome.blade.php)</h2>
 
 <div class="container mt-5">
     <div class="row row-cols-1 row-cols-md-4 g-2 justify-content-center">
