@@ -2,148 +2,322 @@
 
 @section('content')
 <style>
-    /* Card and Container Styles */
-    .card {
+    /* General Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f1eddf;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header Section */
+    .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 170px;
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+
+    .profile-header h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #155437;
         margin: 0;
     }
 
-    .card-text{
-        text-align: justify;
+    .profile-header p {
+        font-size: 18px;
+        color: #777;
+        max-width: 600px;
     }
 
+    .profile-header img {
+        width: 250px;
+        height: 375px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* About Section */
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .about-section h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #155437;
+        margin-bottom: 30px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.7;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: 50px;
+    }
+
+    /* Hobbies Section */
+    .hobbies-section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
 
     .hobby-card {
-        transition: transform 0.2s;
+        width: 300px;
+        margin: 20px;
+        background-color: #f8f8f8;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
     }
 
     .hobby-card:hover {
-        transform: translateY(-5px);
+        transform: scale(1.05);
     }
 
-    #th{
-        text-align: center;
-        vertical-align: middle;
+    .hobby-card h5 {
+        font-size: 24px;
+        color: #155437;
+        margin-bottom: 15px;
     }
-    #td{
-        vertical-align: middle;
+
+    .hobby-card p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+    .icon {
+        font-size: 2.5rem;
+        color: #7b1fa2;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+    }
+    .icon:hover {
+        color: #ab47bc;
+    }
+
+    /* Professional Certifications Section */
+    .certifications-section {
+        background-color: #f8f8f8;
+        padding: 50px 20px;
+        border-radius: 20px;
+        margin-top: 50px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .certifications-section h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #155437;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    .table th, .table td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 16px;
+    }
+
+    .table th {
+        background-color: #155437;
+        color: white;
+        font-weight: 600;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f0f8ff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .profile-header {
+            flex-direction: column;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .profile-header img {
+            margin-top: 20px;
+        }
+
+        .hobbies-section {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hobby-card {
+            width: 80%;
+        }
+
+        .table {
+            font-size: 14px;
+        }
+    }
+    /* Contact Section */
+    .contact-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .contact-section h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #155437;
+        margin-bottom: 30px;
+    }
+
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .contact-icons a {
+        text-decoration:none;
+        color: #554940;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+        color: #ab47bc;
     }
 </style>
 
 <div class="container">
-    <h2 class="text-center my-3">About Ooi Ming Fang (CD21059)</h2>
 
-    <div class="row g-0">
-        <!-- First Column with Image -->
-        <div class="col-auto">
-            <img src="{{ asset('images/ooimingfang.jpg') }}" class="rounded float-right" alt="...">
+    <!-- Profile Header Section -->
+    <div class="profile-header">
+        <div>
+            <h2>About Ooi Ming Fang (CD21059)</h2>&nbsp
+            <p>Computer Science student specializing in programming, game development, and digital content creation.</p>
+            <p>Passionate about technology and digital experiences.</p>
         </div>
+        <img src="{{ asset('images/ooimingfang.jpg') }}" alt="Ooi Ming Fang">
+    </div>
 
-        <!-- Second Column with Card -->
-        <div class="col">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h3>Personal Profile</h3>
-                    <p class="mt-2" style="text-align: justify;">
-                        A highly motivated individual with a robust foundation in computer systems, networking, and cloud technologies. Driven by a passion for technology, I am seeking an internship opportunity to apply my academic knowledge and actively contribute to projects focused on network infrastructure, cloud solutions, and cybersecurity. With a strong grasp of network protocols, system administration, and cloud computing principles, I am eager to work alongside industry professionals to gain hands-on experience.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <!-- About Section -->
+    <div class="about-section">
+        <h3>Personal Profile</h3>
+        <p class="about-text">
+            I am a Computer Science student with a strong foundation in programming and multimedia. Proficient in C, PHP, HTML, JavaScript, and Microsoft Office, I am also skilled in game development, utilizing tools like Unity. My goal is to leverage my technical skills to help businesses succeed by creating engaging content and strategies for the digital space.
+        </p>
     </div>
 
     <!-- Hobbies Section -->
-    <div class="container py-3">
-        <h3 class="mb-4">Hobbies</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card hobby-card h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Outdoor Activities</h5>
-                        <p class="card-text">Enjoy coding and developing applications especially android applications.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card hobby-card h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Reading</h5>
-                        <p class="card-text" >Reading some book to release stress.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card hobby-card h-100" >
-                    <div class="card-body text-center" >
-                        <h5 class="card-title">Listening Music</h5>
-                        <p class="card-text">Love to listen piano music.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="hobbies-section">
+        <div class="hobby-card">
+            <div class="icon">&#127957;</div>
+            <h5>Outdoor Activities</h5>
+            <p>I enjoy outdoor activities because they help me recharge and stay motivated. Whether it's hiking, cycling, or simply walking, nature always inspires me.</p>
+        </div>
+        <div class="hobby-card">
+            <div class="icon">&#127925;</div>
+            <h5>Listening to Music</h5>
+            <p>Music is my escape. It helps me relax, explore different cultures, and find new sources of inspiration. It’s both soothing and energizing.</p>
+        </div>
+        <div class="hobby-card">
+            <div class="icon">&#128218;</div>
+            <h5>Reading Novels</h5>
+            <p>Reading is a way to immerse myself in different worlds and perspectives. I enjoy how it sparks my creativity and expands my understanding of the world.</p>
         </div>
     </div>
 
-    <div class="container py-3">
-        <h3 class="mb-3">Skills</h3>
-        <!-- Skills table remains the same -->
-        <table class="table table-sm table-hover table-bordered text-center">
-        <thead class="table-light">
-      <tr>
-        <th scope="col"  width="5%">No.</th>
-        <th scope="col"  width="50%">Professional Certificate</th>
-        <th scope="col"  width="25%">Certified by</th>
-        <th scope="col"  width="20%">Issue Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td >1</td>
-        <td >Enterprise Networking, Security and Automation</td>
-        <td >CCNA</td>
-        <td >Aug 2023</td>
-      </tr>
+    <!-- Professional Certifications Section -->
+    <div class="certifications-section">
+        <h3>Professional Certifications</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Professional Certificate</th>
+                    <th>Certified by</th>
+                    <th>Issue Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>AI Aware Badge - AI untuk Rakyat</td>
+                    <td>MyDIGITAL and Intel</td>
+                    <td>Mar 2024</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>AI Appreciate Badge - AI untuk Rakyat</td>
+                    <td>MyDIGITAL and Intel</td>
+                    <td>Mar 2024</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>CCNA: Introduction to Networks</td>
+                    <td>Cisco</td>
+                    <td>Mar 2022</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Unity Junior Programmer</td>
+                    <td>Unity</td>
+                    <td>Nov 2024</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Unity VR Development</td>
+                    <td>Unity</td>
+                    <td>Nov 2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-      <tr>
-        <td >2</td>
-        <td >Switching, Routing and Wireless Essentials</td>
-        <td >CCNA</td>
-        <td >Feb 2023</td>
-      </tr>
-
-      <tr>
-        <td >3</td>
-        <td >Introduction to Networks</td>
-        <td >CCNA</td>
-        <td >Mar 2022</td>
-      </tr>
-
-      <tr>
-        <td >5</td>
-        <td >Detect Manufacturing Defects using Visual Inspection AI</td>
-        <td >Google</td>
-        <td >May 2024</td>
-      </tr>
-
-      <tr>
-        <td >6</td>
-        <td >Manage Kubernetes in Google Cloud</td>
-        <td >Google</td>
-        <td >May 2024</td>
-      </tr>
-
-      <tr>
-        <td >7</td>
-        <td >Monitor and Manage Google Cloud Resources</td>
-        <td >Google</td>
-        <td >May 2024</td>
-      </tr>
-
-      <tr>
-        <td >8</td>
-        <td >Professional Blockchain Technology & Cyber Physical System</td>
-        <td >MIFA</td>
-        <td >Jul 2024</td>
-      </tr>
-    </tbody>        </table>
+    <div class="contact-section">
+    <h3>Contact Information</h3>
+    <div class="contact-icons">
+        <button type="button" class="btn btn-outline-success" onclick="window.open('mailto:fang4245@gmail.com', '_blank')" title="Email">
+            Email <i class="fas fa-envelope"></i>
+        </button>
+        <button type="button" class="btn btn-outline-success" onclick="window.open('https://linkedin.com/in/ooi-ming-fang-b0aba1299/', '_blank')" title="LinkedIn">
+            LinkedIn <i class="fas fa-linkedin"></i>
+        </button>
+        <button type="button" class="btn btn-outline-success" onclick="window.open('http://github.com/OoiMFang', '_blank')" title="GitHub">
+            GitHub <i class="fas fa-github"></i>
+        </button>
     </div>
 </div>
+
+</div>
+
 @endsection
