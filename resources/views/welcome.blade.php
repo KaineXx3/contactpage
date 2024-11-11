@@ -48,7 +48,7 @@
         <div class="col">
             <div class="card h-100" style="width: 200px;">
                 <div class="card-img-top">
-                    <img src="{{ asset('images/tanpeiyee.jfif') }}" alt="" style="width: 100%; height: auto;">
+                    <img src="{{ asset('images/tpy.jpeg') }}" alt="" style="width: 100%; height: auto;">
                 </div>
                 <div class="card-body text-center d-flex flex-column">
                     <h5 class="card-title">TAN PEI YEE</h5>
