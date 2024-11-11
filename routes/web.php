@@ -13,8 +13,14 @@ Route::get('/aboutJimmy', function () {
     return view('aboutJimmy');
 });
 
-Route::get('/aboutJimmy', function () {
+
+Route::get('/aboutPeiYee', function () {
     return view('aboutPeiYee');
+});
+
+Route::get('/aboutMF', function () {
+    return view('aboutMF');
+
 });
 
 Route::get('/contact', function () {
