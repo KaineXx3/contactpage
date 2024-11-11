@@ -13,7 +13,6 @@ Route::get('/aboutJimmy', function () {
     return view('aboutJimmy');
 });
 
-
 Route::get('/aboutPeiYee', function () {
     return view('aboutPeiYee');
 });

@@ -97,52 +97,39 @@
     <tbody>
       <tr>
         <td >1</td>
-        <td >Enterprise Networking, Security and Automation</td>
-        <td >CCNA</td>
-        <td >Aug 2023</td>
+        <td >AI Aware Badge - AI untuk Rakyat</td>
+        <td >MyDIGITAL and Intel</td>
+        <td >Mar 2024</td>
       </tr>
 
       <tr>
         <td >2</td>
-        <td >Switching, Routing and Wireless Essentials</td>
-        <td >CCNA</td>
-        <td >Feb 2023</td>
+        <td >AI Appreciate Badge - AI untuk Rakyat</td>
+        <td >MyDIGITAL and Intel</td>
+        <td >Mar 2024</td>
       </tr>
 
       <tr>
         <td >3</td>
-        <td >Introduction to Networks</td>
-        <td >CCNA</td>
+        <td >CCNA: Introduction to Networks</td>
+        <td >Cisco</td>
         <td >Mar 2022</td>
       </tr>
 
       <tr>
+        <td >4</td>
+        <td >Unity Junior Programmer</td>
+        <td >Unity</td>
+        <td >Nov 2024</td>
+      </tr>
+
+      <tr>
         <td >5</td>
-        <td >Detect Manufacturing Defects using Visual Inspection AI</td>
-        <td >Google</td>
-        <td >May 2024</td>
+        <td >Unity VR Development</td>
+        <td >Unity</td>
+        <td >Nov 2024</td>
       </tr>
 
-      <tr>
-        <td >6</td>
-        <td >Manage Kubernetes in Google Cloud</td>
-        <td >Google</td>
-        <td >May 2024</td>
-      </tr>
-
-      <tr>
-        <td >7</td>
-        <td >Monitor and Manage Google Cloud Resources</td>
-        <td >Google</td>
-        <td >May 2024</td>
-      </tr>
-
-      <tr>
-        <td >8</td>
-        <td >Professional Blockchain Technology & Cyber Physical System</td>
-        <td >MIFA</td>
-        <td >Jul 2024</td>
-      </tr>
     </tbody>        </table>
     </div>
 </div>
