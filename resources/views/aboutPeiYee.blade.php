@@ -88,6 +88,13 @@
         height: 280px;
     }
 
+     /*Contact Info Section*/
+     .contact-image{
+        width: 75px;
+        height: 65px;
+    }
+
+
     /* Card Styles */
     .card {
         border: none;
@@ -215,14 +222,14 @@
 <!-- Hobbies Section -->
 <section id="hobbies" class="py-5 bg-light animated animated-delay">
   <div class="container">
-    <h2 class="text-center mb-4">My Hobbies</h2>
+    <h2 class="text-center mb-4 skill-font">My Hobbies</h2>
     <div class="row justify-content-center">
       <!-- Hobby 1: Game Development -->
       <div class="col-md-4">
         <div class="card shadow-lg rounded">
           <img src="{{ asset('images//game.png') }}" class="card-img-top" alt="Game Development">
           <div class="card-body">
-            <h5 class="card-title">Game Development</h5>
+            <h5 class="fw-bold mb-2">Game Development</h5>
             <p class="card-text text-secondary fst-italic">I love creating immersive, interactive games. From designing mechanics to coding in Unity, I am passionate about making engaging experiences.</p>
           </div>
         </div>
@@ -233,7 +240,7 @@
         <div class="card shadow-lg rounded">
           <img src="{{ asset('images/paint.png') }}" class="card-img-top" alt="Painting">
           <div class="card-body">
-            <h5 class="card-title">Painting</h5>
+            <h5 class="fw-bold mb-2">Painting</h5>
             <p class="card-text text-secondary fst-italic">Exploring my creative side with different mediums such as watercolors and acrylics. I love the process of turning blank canvases into colorful stories.</p>
           </div>
         </div>
@@ -244,7 +251,7 @@
         <div class="card shadow-lg rounded">
           <img src="{{ asset('images/photography.png') }}" class="card-img-top" alt="Photography">
           <div class="card-body">
-            <h5 class="card-title">Photography</h5>
+            <h5 class="fw-bold mb-2">Photography</h5>
             <p class="card-text text-secondary fst-italic">Capturing life's moments through the lens. Experimenting with light, angles, and perspectives to create powerful images that tell stories.</p>
           </div>
         </div>
@@ -253,4 +260,52 @@
   </div>
 </section>
 
+<!-- Contact Information -->
+<section id="contact">
+  <div class="container text-center animated animated-delay">
+    <h2 class="skill-font mb-4">Contact Information</h2>
+    <div class="row justify-content-center">
+      
+      <!-- Contact: LinkedIn -->
+      <div class="col-md-2 mb-2">
+        <div>
+            <img src="{{ asset('images/linkedIn.png') }}" class="contact-image mx-auto" alt="LinkedIn">
+            <h5 class="mt-3">LinkedIn</h5>
+        </div>
+        <a href="https://www.linkedin.com/in/tan-pei-yee-904a3210b/" target="_blank">
+          <div>
+            <button type="button" class="btn btn-outline-secondary">Visit my Profile</button>
+          </div>
+        </a>
+      </div>
+
+      <!-- Contact: Phone -->
+      <div class="col-md-2 mb-2">
+        <div>
+            <img src="{{ asset('images/whatsapp.png') }}" class="contact-image mx-auto" alt="LinkedIn">
+            <h5 class="mt-3">WhatsApp</h5>
+        </div>
+        <a href="https://web.whatsapp.com/" target="_blank">
+          <div>
+            <button type="button" class="btn btn-outline-secondary">WhatsApp Me</button>
+          </div>
+        </a>
+      </div>
+
+      <!-- Contact: Email -->
+      <div class="col-md-2 mb-2">
+        <div>
+            <img src="{{ asset('images/gmail.png') }}" class="contact-image mx-auto" alt="LinkedIn">
+            <h5 class="mt-3">Email</h5>
+        </div>
+        <a href="https://mail.google.com" target="_blank">
+          <div>
+            <button type="button" class="btn btn-outline-secondary">Email Me</button>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
 @endsection
