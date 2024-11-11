@@ -12,7 +12,7 @@
         <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required >
       </div>  
       <div class="mb-3">
-        <label for="email" class="form-label">Email addresss</label>
+        <label for="email" class="form-label">Email address</label>
         <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
       </div>
 
