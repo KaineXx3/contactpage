@@ -35,7 +35,7 @@
     <div class="row g-0">
         <!-- First Column with Image -->
         <div class="col-auto">
-            <img src="{{ asset('images/jimmy.jfif') }}" class="rounded float-right" alt="...">
+            <img src="{{ asset('images/tanpeiyee.jfif') }}" class="rounded float-right" alt="...">
         </div>
 
         <!-- Second Column with Card -->
@@ -58,16 +58,16 @@
             <div class="col">
                 <div class="card hobby-card h-100">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Programming</h5>
-                        <p class="card-text">Enjoy coding and developing applications especially android applications.</p>
+                        <h5 class="card-title">Game Development</h5>
+                        <p class="card-text">Enjoy creating and developing immersive and engaging game.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card hobby-card h-100">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Reading</h5>
-                        <p class="card-text" >Reading some book to release stress.</p>
+                        <h5 class="card-title">Drawing</h5>
+                        <p class="card-text" >Love to draw some arts.</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 <div class="card hobby-card h-100" >
                     <div class="card-body text-center" >
                         <h5 class="card-title">Listening Music</h5>
-                        <p class="card-text">Love to listen piano music.</p>
+                        <p class="card-text">Love to listen music to release stress.</p>
                     </div>
                 </div>
             </div>
