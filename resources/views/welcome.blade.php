@@ -35,7 +35,7 @@
         <div class="col">
             <div class="card h-100" style="width: 200px;">
                 <div class="card-img-top">
-                    <img src="{{ asset('images/ooimingfang.jfif') }}" alt="" style="width: 100%; height: auto;">
+                    <img src="{{ asset('images/ooimingfang.jpg') }}" alt="" style="width: 100%; height: auto;">
                 </div>
                 <div class="card-body text-center d-flex flex-column">
                     <h5 class="card-title">OOI MING FANG</h5>
