@@ -304,13 +304,20 @@
     </div>
 
     <div class="contact-section">
-        <h3>Contact Information</h3>
-        <div class="contact-icons">
-            <a href="mailto:fang4245@gmail.com" title="Email">Email<i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/ooi-ming-fang-b0aba1299/" target="_blank" title="LinkedIn">LinkedIn<i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/OoiMFang" target="_blank" title="GitHub">GitHub<i class="fab fa-github"></i></a>
-        </div>
+    <h3>Contact Information</h3>
+    <div class="contact-icons">
+        <button type="button" class="btn btn-outline-success" onclick="window.open('mailto:fang4245@gmail.com', '_blank')" title="Email">
+            Email <i class="fas fa-envelope"></i>
+        </button>
+        <button type="button" class="btn btn-outline-success" onclick="window.open('https://linkedin.com/in/ooi-ming-fang-b0aba1299/', '_blank')" title="LinkedIn">
+            LinkedIn <i class="fas fa-linkedin"></i>
+        </button>
+        <button type="button" class="btn btn-outline-success" onclick="window.open('http://github.com/OoiMFang', '_blank')" title="GitHub">
+            GitHub <i class="fas fa-github"></i>
+        </button>
     </div>
+</div>
+
 </div>
 
 @endsection
