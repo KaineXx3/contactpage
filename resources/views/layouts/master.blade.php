@@ -37,6 +37,9 @@
           <a class="nav-link active" aria-current="page" href="aboutJimmy">Jimmy</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="aboutPeiYee">Jimmy</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="contact">Contact</a>
         </li>
 
