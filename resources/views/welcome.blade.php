@@ -1,68 +1,112 @@
 @extends('layouts.master')
 @section('content')
 
-<h2 class="text-center my-3">Meet Our Team</h2>
+<style>
+    .image {
+        width: 100%;  
+        height: 450px; 
+        object-fit: cover; 
+        display: block;
+        margin: 0 auto; 
+    }
 
-<div class="container mt-5">
-    <div class="row row-cols-1 row-cols-md-4 g-2 justify-content-center">
-        <!-- First Card -->
-        <div class="col">
-            <div class="card h-100" style="width: 200px;">
+    .card {
+        text-align: center; 
+        overflow: hidden; 
+        height: auto; 
+    }
+
+    .card-body .card-title {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Animated Content */
+    .animated {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s forwards;
+    }
+
+    .animated-delay {
+        animation-delay: 0.3s;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<h2 class="text-center my-5 animated animated-delay">Our Team</h2>
+
+<section class="animated animated-delay">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Jimmy -->
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-lg rounded text-center border-0">
             <a href="{{ url('/aboutJimmy') }}">
-                <div class="card-img-top">
-                    <img src="{{ asset('images/jimmy.jfif') }}" alt="" style="width: 100%; height: auto;">
-                </div>
+                <img src="{{ asset('images/jimmy.jfif') }}" alt="" class="image">
             </a>
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title">JIMMY TANG JING MING</h5>
-                    <p class="card-text">CA21031</p>
-                </div>
+            <div class="card-body">
+                <h3 class="card-title">JIMMY TANG JING MING</h3>
+                <h5 class="card-text text-secondary fst-italic">Leader</h5>
             </div>
         </div>
-        
-        <!-- Second Card -->
-        <div class="col">
-            <div class="card h-100" style="width: 200px;">
-                <a href="{{ url('/aboutGan') }}">
-                    <div class="card-img-top">
-                        <img src="{{ asset('images/ganweilin.jfif') }}" alt="" style="width: 100%; height: auto;">
-                    </div>
-                </a>
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title">GAN WEI LIN</h5>
-                    <p class="card-text">CA21085</p>
-                </div>
+      </div>
+
+      <!-- Gan -->
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-lg rounded text-center border-0">
+            <a href="{{ url('/aboutGan') }}">
+                <img src="{{ asset('images/ganweilin.jfif') }}" alt="" class="image">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">GAN WEI LIN</h3>
+                <h5 class="card-text text-secondary fst-italic">Team Member</h5>
             </div>
         </div>
-        
-        <!-- Third Card -->
-        <div class="col">
-            <div class="card h-100" style="width: 200px;">
-                <div class="card-img-top">
-                    <img src="{{ asset('images/ooimingfang.jpg') }}" alt="" style="width: 100%; height: auto;">
-                </div>
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title">OOI MING FANG</h5>
-                    <p class="card-text">CD21059</p>
-                </div>
+      </div>
+
+      <!-- Ming Fang -->
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-lg rounded text-center border-0">
+            <a href="{{ url('/aboutMF') }}">
+                <img src="{{ asset('images/ooimingfang.jpg') }}" alt="" class="image">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">OOI MING FANG</h3>
+                <h5 class="card-text text-secondary fst-italic">Team Member</h5>
             </div>
         </div>
-        
-        <!-- Fourth Card -->
-        <div class="col">
-            <div class="card h-100" style="width: 200px;">
-                <a href="{{ url('/aboutPeiYee') }}">
-                    <div class="card-img-top">
-                        <img src="{{ asset('images/tpy.jpeg') }}" alt="" style="width: 100%; height: auto;">
-                    </div>
-                </a>
-                <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title">TAN PEI YEE</h5>
-                    <p class="card-text">CD21073</p>
-                </div>
+      </div>
+
+      <!-- Pei Yee -->
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-lg rounded text-center border-0">
+            <a href="{{ url('/aboutPeiYee') }}">
+                <img src="{{ asset('images/tpy.jpeg') }}" alt="" class="image">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">TAN PEI YEE</h3>
+                <h5 class="card-text text-secondary fst-italic">Team Member</h5>
             </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
 @endsection

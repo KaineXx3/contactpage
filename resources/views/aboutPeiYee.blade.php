@@ -10,8 +10,8 @@
 
     /*Profile Section*/
     .profile-image {
-        width: 200px;
-        height: 250px;
+        width: 100%;
+        height: 80%;
         object-fit: cover;
         border-radius: 50%;
         border: 2px solid #b3a68d;
@@ -42,17 +42,14 @@
         font-weight: bold;
     }
 
+    /* Hobbies Section */
+    .hobby-image {
+      height: 200px;
+      object-fit: cover; 
+      width: 100%;
+    }
+
     /* Skill bars styling */
-    .skill {
-        margin-top: 1rem;
-    }
-
-    .skill p {
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-    }
-
     .progress-bar {
         background-color: #e0e0e0;
         height: 8px;
@@ -69,7 +66,6 @@
         font-size:40px;
         text-align: center;
         color: #483e33;
-        padding-top:10px;
         padding-bottom: 25px;
     }
 
@@ -82,11 +78,6 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
     }
 
-    /*Hobby Section*/
-    .card-img-top{
-        width: 415px;
-        height: 280px;
-    }
 
      /*Contact Info Section*/
      .contact-image{
@@ -158,7 +149,7 @@
         <div class="col-md-10 animated animated-delay">
             <h4 class="profile">Hello, I'm</h4>
             <h2 class="mt-2 profile-name">
-                Tan Pei Yee
+                Tan Pei Yee (CD21073)
             </h2>
             <p class="py-2">
                 I'm a <span class="highlight"> Computer Science </span> student from <span class="highlight"> University of Malaysia Pahang Al-Sultan Abdullah (UMPSA) </span> with a strong skill set in game development, particularly using Unity and C# programming. I'm passionate about creating immersive, engaging gaming experiences and dedicated to continually learning new technologies and techniques to enhance my programming skills. With a focus on both technical proficiency and creativity, driven by my love for game development and a commitment to creating captivating digital experiences.
@@ -227,7 +218,7 @@
       <!-- Hobby 1: Game Development -->
       <div class="col-md-4">
         <div class="card shadow-lg rounded">
-          <img src="{{ asset('images//game.png') }}" class="card-img-top" alt="Game Development">
+          <img src="{{ asset('images//game.png') }}" class="hobby-image" alt="Game Development">
           <div class="card-body">
             <h5 class="fw-bold mb-2">Game Development</h5>
             <p class="card-text text-secondary fst-italic">I love creating immersive, interactive games. From designing mechanics to coding in Unity, I am passionate about making engaging experiences.</p>
@@ -238,7 +229,7 @@
       <!-- Hobby 2: Painting -->
       <div class="col-md-4">
         <div class="card shadow-lg rounded">
-          <img src="{{ asset('images/paint.png') }}" class="card-img-top" alt="Painting">
+          <img src="{{ asset('images/paint.png') }}" class="hobby-image" alt="Painting">
           <div class="card-body">
             <h5 class="fw-bold mb-2">Painting</h5>
             <p class="card-text text-secondary fst-italic">Exploring my creative side with different mediums such as watercolors and acrylics. I love the process of turning blank canvases into colorful stories.</p>
@@ -249,7 +240,7 @@
       <!-- Hobby 3: Photography -->
       <div class="col-md-4">
         <div class="card shadow-lg rounded">
-          <img src="{{ asset('images/photography.png') }}" class="card-img-top" alt="Photography">
+          <img src="{{ asset('images/photography.png') }}" class="hobby-image"  alt="Photography">
           <div class="card-body">
             <h5 class="fw-bold mb-2">Photography</h5>
             <p class="card-text text-secondary fst-italic">Capturing life's moments through the lens. Experimenting with light, angles, and perspectives to create powerful images that tell stories.</p>
