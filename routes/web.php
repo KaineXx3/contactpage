@@ -23,8 +23,8 @@ Route::get('/aboutMF', function () {
 });
 Route::get('/aboutGan', function () {
     return view('aboutGan');
+})->name('aboutGan');
 
-});
 
 Route::get('/contact', function () {
     return view('contact');
