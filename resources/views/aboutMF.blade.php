@@ -81,7 +81,7 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        margin-top: 5px;
+        margin-top: 30px;
     }
 
     .hobby-card {
@@ -144,7 +144,7 @@
         margin: 20px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
-        margin-bottom: 5px; /* Adds space between rows of cards */
+        margin-bottom: 20px; /* Adds space between rows of cards */
     }
 
     .card:hover {
@@ -219,6 +219,7 @@
         color: #155437;
         margin-bottom: 30px;
         text-align: center;
+        margin-top: 30px;
     }
 
     .contact-icons {
@@ -260,6 +261,73 @@
         </p>
     </div>
 
+     <!-- Professional Certifications Section -->
+    <div class="certifications-section">
+        <h3>Professional Skills</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Certification Card -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Graphic Design Fundamentals</h5>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Web Design Basics</h5>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">3D Modeling and Animation</h5>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Unity Game Development</h5>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Unity VR Development</h5>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Adobe Photoshop</h5>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Hobbies Section -->
     <div class="hobbies-section">
         <div class="hobby-card">
@@ -278,76 +346,6 @@
             <p>Reading is a way to immerse myself in different worlds and perspectives. I enjoy how it sparks my creativity and expands my understanding of the world.</p>
         </div>
     </div>
-
-    <!-- Professional Certifications Section -->
-<div class="certifications-section">
-    <h3>Professional Certifications</h3>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <!-- Certification Card -->
-        <div class="col">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Graphic Design Fundamentals</h5>
-                    <div class="progress my-3">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Repeat for other certifications -->
-        <div class="col">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Web Design Basics</h5>
-                    <div class="progress my-3">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">3D Modeling and Animation</h5>
-                    <div class="progress my-3">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Unity Game Development</h5>
-                    <div class="progress my-3">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Unity VR Development</h5>
-                    <div class="progress my-3">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Adobe Photoshop</h5>
-                    <div class="progress my-3">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
     <div class="contact-section">
     <h3>Contact Information</h3>
