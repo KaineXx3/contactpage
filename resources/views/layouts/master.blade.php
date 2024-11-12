@@ -27,7 +27,7 @@
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,10 +37,9 @@
           <a class="nav-link active" aria-current="page" href="aboutJimmy">Jimmy</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="aboutPeiYee">Jimmy</a>
-
           <a class="nav-link active" aria-current="page" href="aboutMF">Ming Fang</a>
-
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="aboutPeiYee">Pei Yee</a>
         </li>
         <li class="nav-item">
