@@ -123,72 +123,94 @@
     /* Professional Certifications Section */
     .certifications-section {
         background-color: #f8f8f8;
-        padding: 50px 20px;
+        padding: 40px;
         border-radius: 20px;
-        margin-top: 50px;
+        margin: 20px auto;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
     }
 
     .certifications-section h3 {
-        font-size: 32px;
-        font-weight: 600;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
         color: #155437;
-        text-align: center;
-        margin-bottom: 30px;
+        font-weight: bold;
     }
 
-    .table {
-        width: 100%;
-        margin-top: 20px;
-        border-collapse: collapse;
+    .card {
+        border-radius: 15px;
+        width: 300px;
+        margin: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 5px; /* Adds space between rows of cards */
     }
 
-    .table th, .table td {
-        padding: 15px;
-        text-align: center;
-        border-bottom: 1px solid #ddd;
-        font-size: 16px;
+    .card:hover {
+        transform: scale(1.05); /* Slightly scale up the card on hover */
     }
 
-    .table th {
-        background-color: #155437;
-        color: white;
-        font-weight: 600;
+    .card-body {
+        padding: 15px; /* Adjust padding inside cards */
     }
 
-    .table tbody tr:hover {
-        background-color: #f0f8ff;
+    .card-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #155437;
+        margin-bottom: 15px;
     }
 
-    /* Responsive Design */
+    .progress {
+        height: 20px; /* Slightly taller progress bar */
+        border-radius: 5px;
+    }
+
+    .progress-bar {
+        background-color: #f1c40f; /* Golden color */
+        border-radius: 5px;
+        color: #b0632f;
+        font-weight: bold;
+    }
+
+    .row-cols-1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Ensure space between cards */
+    }
+
+    .row-cols-md-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 20px; /* Space between cards in the row */
+    }
+
+    .g-4 {
+        gap: 20px; /* Ensure space between grid items */
+    }
+
+    /* Media Query for smaller devices */
     @media (max-width: 768px) {
-        .profile-header {
-            flex-direction: column;
-            text-align: center;
-            padding: 60px 20px;
+        .certifications-section h3 {
+            font-size: 2em;
         }
 
-        .profile-header img {
-            margin-top: 20px;
+        .row-cols-md-2 {
+            grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
         }
 
-        .hobbies-section {
-            flex-direction: column;
-            align-items: center;
+        .card-body {
+            padding: 20px;
         }
 
-        .hobby-card {
-            width: 80%;
+        .card-title {
+            font-size: 1.2em;
         }
 
-        .table {
-            font-size: 14px;
+        .progress-bar {
+            height: 8px; /* Slightly smaller progress bar on smaller screens */
         }
-    }
-    /* Contact Section */
-    .contact-section {
-        margin-top: 50px;
-        text-align: center;
     }
 
     .contact-section h3 {
@@ -196,6 +218,7 @@
         font-weight: 600;
         color: #155437;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     .contact-icons {
@@ -257,51 +280,74 @@
     </div>
 
     <!-- Professional Certifications Section -->
-    <div class="certifications-section">
-        <h3>Professional Certifications</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Professional Certificate</th>
-                    <th>Certified by</th>
-                    <th>Issue Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>AI Aware Badge - AI untuk Rakyat</td>
-                    <td>MyDIGITAL and Intel</td>
-                    <td>Mar 2024</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>AI Appreciate Badge - AI untuk Rakyat</td>
-                    <td>MyDIGITAL and Intel</td>
-                    <td>Mar 2024</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>CCNA: Introduction to Networks</td>
-                    <td>Cisco</td>
-                    <td>Mar 2022</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Unity Junior Programmer</td>
-                    <td>Unity</td>
-                    <td>Nov 2024</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Unity VR Development</td>
-                    <td>Unity</td>
-                    <td>Nov 2024</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="certifications-section">
+    <h3>Professional Certifications</h3>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Certification Card -->
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Graphic Design Fundamentals</h5>
+                    <div class="progress my-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for other certifications -->
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Web Design Basics</h5>
+                    <div class="progress my-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">3D Modeling and Animation</h5>
+                    <div class="progress my-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Unity Game Development</h5>
+                    <div class="progress my-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Unity VR Development</h5>
+                    <div class="progress my-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Adobe Photoshop</h5>
+                    <div class="progress my-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
 
     <div class="contact-section">
     <h3>Contact Information</h3>
