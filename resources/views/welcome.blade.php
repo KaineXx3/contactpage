@@ -62,7 +62,7 @@
             </a>
             <div class="card-body">
                 <h3 class="card-title">JIMMY TANG JING MING</h3>
-                <h5 class="card-text text-secondary fst-italic">Leader</h5>
+                <h5 class="card-text text-secondary fst-italic">CA21031</h5>
             </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
             </a>
             <div class="card-body">
                 <h3 class="card-title">GAN WEI LIN</h3>
-                <h5 class="card-text text-secondary fst-italic">Team Member</h5>
+                <h5 class="card-text text-secondary fst-italic">CA21085</h5>
             </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
             </a>
             <div class="card-body">
                 <h3 class="card-title">OOI MING FANG</h3>
-                <h5 class="card-text text-secondary fst-italic">Team Member</h5>
+                <h5 class="card-text text-secondary fst-italic">CD21059</h5>
             </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
             </a>
             <div class="card-body">
                 <h3 class="card-title">TAN PEI YEE</h3>
-                <h5 class="card-text text-secondary fst-italic">Team Member</h5>
+                <h5 class="card-text text-secondary fst-italic">CD21073</h5>
             </div>
         </div>
       </div>
