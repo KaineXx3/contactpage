@@ -22,6 +22,10 @@ Route::get('/aboutMF', function () {
     return view('aboutMF');
 
 });
+Route::get('/aboutGan', function () {
+    return view('aboutGan');
+
+});
 
 Route::get('/contact', function () {
     return view('contact');
