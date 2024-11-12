@@ -150,7 +150,7 @@
 </style>
 
 <!-- Profile Information -->
-<div class="container">
+<div class="container pt-3">
     <div class="row">
         <div class="col-md-2 text-center animated animated-delay">
             <img src="{{ asset('images/tpy.jpeg') }}" class="profile-image" alt="Tan Pei Yee" />

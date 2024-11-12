@@ -22,7 +22,7 @@
         /* Initial Large Navbar Styles */
         .navbar-custom {
             transition: all 0.3s ease;
-            padding: 20px 10px;
+            padding: 5px 10px;
             background-color: #ffffff; /* Background color */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -100,7 +100,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="py-4">
+    <main class="py-5">
         @yield('content')
     </main>
 
