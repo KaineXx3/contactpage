@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<h1 class="ms-5">Contact</h1>
+<h1 class="ms-5 mt-3">Contact</h1>
 
 <div class="d-flex justify-content-center align-items-center mt-3">
   <div class="col-md-11">
