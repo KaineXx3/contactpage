@@ -225,7 +225,7 @@
             <div class="col">
                 <div class="card p-3 card-hover-effect">
                     <div class="card-body">
-                        <h5 class="card-title">💻 Programming Languages (Python, Java, HTML/CSS)</h5>
+                        <h5 class="card-title">💻 Programming Languages (Python, Java, C, HTML/CSS)</h5>
                         <div class="progress mt-2">
                             <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">85%</div>
                         </div>
