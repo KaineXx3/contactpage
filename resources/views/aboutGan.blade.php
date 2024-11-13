@@ -2,6 +2,14 @@
 
 @section('content')
 <style>
+    /* Color Variables */
+    :root {
+        --primary-color: #007bff;
+        --secondary-color: #2c3e50;
+        --gradient-primary: linear-gradient(135deg, #e0f7fa, #ffffff);
+        --gradient-secondary: linear-gradient(135deg, #f9fbe7, #ffffff);
+    }
+
     /* General Layout and Container */
     .container {
         max-width: 1000px;
@@ -10,50 +18,29 @@
     /* Header Styles */
     h2, h3 {
         font-weight: 700;
-        color: #2c3e50;
+        color: var(--secondary-color);
     }
 
-    /* Background Image with Gradient Overlay */
+    /* Primary and Secondary Section Backgrounds */
     .gradient-bg-primary {
-        background: linear-gradient(rgba(240, 248, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                    url("{{ asset('images/ganweilin.jfif') }}") no-repeat center center;
-        background-size: cover;
+        background: var(--gradient-primary);
         padding: 3rem 0;
         border-radius: 8px;
-        color: #2c3e50;
+        color: var(--secondary-color);
         text-align: center;
     }
 
-    /* Secondary Section Background with Light Gradient */
     .gradient-bg-secondary {
-        background: linear-gradient(rgba(242, 242, 242, 0.8), rgba(255, 255, 255, 0.8)),
-                    url("{{ asset('images/ganweilin.jfif') }}") no-repeat center center;
-        background-size: cover;
+        background: var(--gradient-secondary);
         padding: 3rem 0;
         border-radius: 8px;
     }
-    .custom-cursor {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: rgba(0, 123, 255, 0.5); /* 半透明蓝色 */
-        position: absolute;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: transform 0.1s ease-out;
-        z-index: 9999;
-    }
-    .custom-cursor.hover {
-        width: 30px;
-        height: 30px;
-        background-color: rgba(0, 123, 255, 0.7); /* 加深颜色 */
-        transition: width 0.2s ease, height 0.2s ease;
-    }
+
     /* Section Divider */
     .section-divider {
         height: 4px;
         width: 80px;
-        background-color: #007bff; /* Primary Color */
+        background-color: var(--primary-color);
         margin: 1rem auto;
     }
 
@@ -61,14 +48,13 @@
     .card {
         border: none;
         background-color: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    .card-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     /* Image Styling */
@@ -87,7 +73,6 @@
         background-color: rgba(255, 255, 255, 0.9);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        overflow: hidden;
     }
 
     .table-hover tbody tr:hover {
@@ -99,10 +84,23 @@
         height: 8px;
         border-radius: 4px;
         overflow: hidden;
+        animation: growProgress 1.5s ease-out;
     }
 
     .progress-bar {
-        transition: width 0.6s ease;
+        font-size: 0.85rem;
+        line-height: 15px;
+        text-align: center;
+    }
+
+    /* Keyframes for Progress Bar Animation */
+    @keyframes growProgress {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
     }
 
     /* Advanced Typography */
@@ -111,125 +109,131 @@
         font-style: italic;
     }
 </style>
+
 <div class="custom-cursor"></div>
 <div class="container my-5">
-    <!-- Header Section with Gradient and Background Image -->
+    <!-- Header Section with Gradient -->
     <section class="gradient-bg-primary">
         <h2 class="my-4">About GAN WEI LIN (CA21085)</h2>
         <p class="text-muted-custom">Dedicated to advancing in technology and cybersecurity fields</p>
         <div class="section-divider"></div>
     </section>
 
-    <!-- Profile Section with Background Image -->
+    <!-- Profile Section -->
     <div class="row g-3 align-items-center my-5 gradient-bg-secondary p-4 rounded">
-        <!-- Image Column -->
         <div class="col-auto text-center">
-            <img src="{{ asset('images/ganweilin.jfif') }}" class="profile-img" alt="Gan Wei Lin">
+            <img src="{{ asset('images/ganweilin.jfif') }}" class="profile-img" alt="Profile picture of Gan Wei Lin">
         </div>
 
-        <!-- Personal Profile Card -->
         <div class="col">
-            <div class="card">
+            <div class="card card-hover-effect">
                 <div class="card-body">
                     <h3 class="mb-3">Personal Profile</h3>
                     <p>
-                        A highly motivated individual with a robust foundation in computer systems, networking, and cloud technologies. Driven by a passion for technology, I am seeking an internship opportunity to apply my academic knowledge and actively contribute to projects focused on network infrastructure, cloud solutions, and cybersecurity. With a strong grasp of network protocols, system administration, and cloud computing principles, I am eager to work alongside industry professionals to gain hands-on experience.
+                        A highly driven and technically proficient individual with a solid foundation in <strong>computer systems</strong>, <strong>networking</strong>, <strong>artificial intelligence</strong>, and <strong>programming</strong>. I bring strong expertise in <strong>system administration</strong>, <strong>network protocols</strong>, and <strong>database management</strong>, with a keen interest in applying these skills to real-world challenges. I am seeking an internship where I can leverage my knowledge and make meaningful contributions to projects in <strong>network infrastructure</strong>, <strong>cloud computing</strong>, and <strong>cybersecurity</strong>.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Hobbies Section with Gradient Overlay -->
-    <div class="container mb-5">
+    <!-- Hobbies Section -->
+    <div class="container mb-5 p-4 rounded" style="background: var(--gradient-primary);">
         <h3 class="mb-4 text-center">Hobbies</h3>
         <div class="section-divider"></div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            <!-- Each hobby card with hover effect class -->
             <div class="col">
-                <div class="card hobby-card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Programming</h5>
-                        <p class="card-text">Enjoy coding and developing applications, especially Android applications.</p>
+                <div class="card hobby-card card-hover-effect h-100 text-center p-2">
+                    <div class="card-body p-3">
+                        <h5 class="card-title" style="font-size: 1rem;">🏀 Playing Basketball</h5>
+                        <p class="card-text" style="font-size: 0.9rem;">Enjoy staying active by playing basketball and improving skills on the court.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Other hobby cards omitted for brevity -->
+            <div class="col">
+                <div class="card hobby-card card-hover-effect h-100 text-center p-2">
+                    <div class="card-body p-3">
+                        <h5 class="card-title" style="font-size: 1rem;">
+                            📚 Studying
+                        </h5>
+                        <p class="card-text" style="font-size: 0.9rem;">Continuously learning new technologies to stay updated with the latest trends.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card hobby-card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Studying</h5>
-                        <p class="card-text">Continuously learning new technologies to stay updated with the latest trends.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card hobby-card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Listening to Music</h5>
-                        <p class="card-text">I love listening to music as a way to unwind and recharge.</p>
+                <div class="card hobby-card card-hover-effect h-100 text-center p-2">
+                    <div class="card-body p-3">
+                        <h5 class="card-title" style="font-size: 1rem;">
+                            🎶 Listening to Music
+                        </h5>
+                        <p class="card-text" style="font-size: 0.9rem;">I love listening to music as a way to unwind and recharge.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Skills Section with Background Image Overlay -->
-    <div class="container mb-5">
+    <!-- Skills Section with Progress Bars -->
+    <div class="container mb-5 p-4 rounded" style="background: var(--gradient-secondary);">
         <h3 class="mb-4 text-center">Skills</h3>
         <div class="section-divider"></div>
-        <table class="table table-sm table-hover table-bordered text-center">
-            <thead class="table-light">
-                <tr>
-                    <th scope="col" width="5%">No.</th>
-                    <th scope="col" width="50%">Professional Certificate</th>
-                    <th scope="col" width="25%">Certified by</th>
-                    <th scope="col" width="20%">Issue Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Enterprise Networking, Security, and Automation</td>
-                    <td>CCNA</td>
-                    <td>Aug 2023</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Switching, Routing, and Wireless Essentials</td>
-                    <td>CCNA</td>
-                    <td>Feb 2023</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Introduction to Networks</td>
-                    <td>CCNA</td>
-                    <td>Mar 2022</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Detect Manufacturing Defects using Visual Inspection AI</td>
-                    <td>Google</td>
-                    <td>May 2024</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Manage Kubernetes in Google Cloud</td>
-                    <td>Google</td>
-                    <td>May 2024</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Monitor and Manage Google Cloud Resources</td>
-                    <td>Google</td>
-                    <td>May 2024</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Professional Blockchain Technology & Cyber Physical System</td>
-                    <td>MIFA</td>
-                    <td>Jul 2024</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- CCNA Skill Card with progress animation -->
+            <div class="col">
+                <div class="card p-3 card-hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">🛡️ Enterprise Networking, Security, and Automation (CCNA)</h5>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 card-hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">🔌 Switching, Routing, and Wireless Essentials (CCNA)</h5>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 card-hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">🌐 Introduction to Networks (CCNA)</h5>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 card-hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">🤖 Artificial Intelligence</h5>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 card-hover-effect">
+                    <div class="card-body">
+                        <h5 class="card-title">💻 Programming Languages (Python, Java, HTML/CSS)</h5>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">85%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 @endsection

@@ -79,14 +79,15 @@
                         <a class="nav-link active" aria-current="page" href="aboutJimmy">Jimmy</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aboutGan">Gan</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="aboutMF">Ming Fang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="aboutPeiYee">Pei Yee</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="aboutGan">Gan</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="contact">Contact</a>
                     </li>
